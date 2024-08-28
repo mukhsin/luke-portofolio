@@ -3,30 +3,10 @@
 import Link            from "next/link";
 import { usePathname } from "next/navigation";
 
-const links = [
-    {
-        name: "Home",
-        path: "/",
-    },
-    {
-        name: "Services",
-        path: "/services",
-    },
-    {
-        name: "Resume",
-        path: "/resume",
-    },
-    {
-        name: "Work",
-        path: "/work",
-    },
-    {
-        name: "Contact",
-        path: "/contact",
-    },
-];
+// lib
+import { links } from "@/lib/links";
 
-const Nav = () => {
+const DesktopNav = () => {
     const pathname = usePathname();
     return (
         <nav className="flex gap-8">
@@ -45,4 +25,4 @@ const Nav = () => {
     );
 };
 
-export default Nav;
+export default DesktopNav;
